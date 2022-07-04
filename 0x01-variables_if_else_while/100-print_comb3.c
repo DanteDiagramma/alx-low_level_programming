@@ -1,25 +1,30 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
- * main - Prints the numbers from 00 to 99, numbers separated by
- *        a comma followed by a space, in ascending order.
+ * main - Entry point
  *
- * Return: Always 0.
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	int digit1, digit2;
+	int d, p;
 
-	for (digit1 = 0; digit1 < 10; digit1++)
+	for (d = '0'; d < '9'; d++)
 	{
-		for (digit2 = 0; digit2 < 10; digit2++)
+		for (p = d + 1; p <= '9'; p++)
 		{
-			putchar((digit1 % 10) + '0');
-			putchar((digit2 % 10) + '0');
-			if (digit1 == 9 && digit2 == 9)
-				continue;
-			putchar(',');
-			putchar(' ');
+			if (p != d)
+			{
+				putchar(d);
+				putchar(p);
+				if (d == '8' && p == '9')
+					continue;
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
