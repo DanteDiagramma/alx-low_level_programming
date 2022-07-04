@@ -10,6 +10,6 @@ int main(void)
 
 	for (number = 0; numbers < 10; numbers++)
 		printf("%d", numbers);
-	printf("\n")
+	printf("\n");
 	return (0);
 }
